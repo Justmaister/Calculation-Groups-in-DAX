@@ -1,4 +1,4 @@
-![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/tabular_editor_icon.png)
+![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/images/tabular_editor_icon.png)
 
 # Calculation-Groups-in-DAX                
 
@@ -9,3 +9,12 @@ With calculation groups we can easily create different functions for all differe
 
 
 The most common use of Calculation Group is on the implementation of different time Intelligence calculations over the measures on the model and the other common use is the creation of slicer where you could select the measure to implement. 
+
+
+With the new update of Power BI where we can format each calculation group you could format the measures to the currency format of each currency value that we have in our dataset. 
+In the file “Calculation Groups Demo.pbix” you could find the implementation of Calculation Groups in 3 different scopes. 
+-	Time Intelligence
+-	Metrics
+-	Currency Code 
+
+![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Calculation Groups in Action.PNG)
