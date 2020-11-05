@@ -13,8 +13,11 @@ The most common use of Calculation Group is on the implementation of different t
 
 With the new update of Power BI where we can format each calculation group you could format the measures to the currency format of each currency value that we have in our dataset. 
 In the file “Calculation Groups Demo.pbix” you could find the implementation of Calculation Groups in 3 different scopes. 
+
 -	Time Intelligence
 -	Metrics
 -	Currency Code 
+
+
 
 ![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/Calculation_Groups_in_Action.PNG)
