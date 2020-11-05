@@ -1,6 +1,6 @@
 ![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/tabular_editor_icon.png)
 
-# Calculation-Groups-in-DAX                
+# Calculation-Groups-with-Tabular-Editor                
 
 Calculation Groups is a set of calculation items created on Tabular Editor that are applied on top of existing DAX measures. 
 
