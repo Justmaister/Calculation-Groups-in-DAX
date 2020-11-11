@@ -61,4 +61,4 @@ With the new update of Power BI where we can format each calculation group you c
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-    [Tabular Editor]: <https://www.sqlbi.com/tools/tabular-editor/>
+Tabular Editor]: <https://www.sqlbi.com/tools/tabular-editor/>
