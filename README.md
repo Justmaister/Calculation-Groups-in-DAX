@@ -1,6 +1,6 @@
 ![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/tabular_editor_icon.png)
 
-# Calculation-Groups-with-Tabular-Editor                
+# Calculation Groups with Tabular Editor                
 
 Calculation Groups is a set of calculation items created on Tabular Editor that are applied on top of existing DAX measures. 
 
@@ -8,15 +8,50 @@ With calculation groups we can easily create different functions for all differe
 
 ![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/Format_String.PNG)
 
-The most common use of Calculation Group is on the implementation of different time Intelligence calculations over the measures on the model and the other common use is the creation of slicer where you could select the measure to implement. 
-
-
-With the new update of Power BI where we can format each calculation group you could format the measures to the currency format of each currency value that we have in our dataset. 
 In the file “Calculation Groups Demo.pbix” you could find the implementation of Calculation Groups in 3 different scopes. 
 
 -	Time Intelligence
 -	Metrics
 -	Currency Code 
+
+### Time Intelligence Calculations
+
+The most common use of Calculation Group is on the implementation of different time Intelligence calculations over the measures on the model and the other common use is the creation of slicer where you could select the measure to implement. 
+
+```sh
+CY = SELECTEDMEASURE ()
+PY = VAR PrevYear =
+        CALCULATE ( SELECTEDMEASURE (), SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+    VAR CurrYear =
+        SELECTEDMEASURE ()
+    VAR Result =
+        IF ( ISBLANK ( CurrYear ), BLANK (), PrevYear )
+    RETURN
+        Result
+QTD = CALCULATE (
+        SELECTEDMEASURE (),
+        DATESQTD ( 'Date'[Date] )
+    )
+YTD = CALCULATE (
+        SELECTEDMEASURE (),
+        DATESYTD ( 'Date'[Date] )
+    )
+YOY = VAR CurrYear =
+        SELECTEDMEASURE ()
+    VAR PrevYear =
+        CALCULATE ( SELECTEDMEASURE (), SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+    VAR Result =
+        IF (
+            ISBLANK ( CurrYear )  || ISBLANK ( PrevYear ),
+            BLANK (),
+            CurrYear - PrevYear
+        )
+    RETURN
+        Result
+```
+
+With the new update of Power BI where we can format each calculation group you could format the measures to the currency format of each currency value that we have in our dataset. 
+
 
 
 
