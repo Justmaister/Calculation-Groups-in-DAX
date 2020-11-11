@@ -1,8 +1,10 @@
-![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/tabular_editor_icon.png)
+[![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/tabular_editor_icon.png)](https://www.sqlbi.com/tools/tabular-editor/)
 
 # Calculation Groups with Tabular Editor                
 
 Calculation Groups is a set of calculation items created on Tabular Editor that are applied on top of existing DAX measures. 
+
+To write this DAX expresions you should download the [Tabular Editor] 
 
 With calculation groups we can easily create different functions for all different measures created on the Tabular Model that save a lot of time, for example, the creation of the different Time Intelligence functions, and now we have the ability to format each of the calculation items.  
 
@@ -12,7 +14,7 @@ In the file “Calculation Groups Demo.pbix” you could find the implementation
 
 -	Time Intelligence
 -	Metrics
--	Currency Code 
+-	Currency Format 
 
 ### Time Intelligence Calculations
 
@@ -56,3 +58,7 @@ With the new update of Power BI where we can format each calculation group you c
 
 
 ![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/Calculation_Groups_in_Action.PNG)
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+    [Tabular Editor]: <https://www.sqlbi.com/tools/tabular-editor/>
