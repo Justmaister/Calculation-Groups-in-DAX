@@ -52,10 +52,31 @@ YOY = VAR CurrYear =
         Result
 ```
 
-With the new update of Power BI where we can format each calculation group you could format the measures to the currency format of each currency value that we have in our dataset. 
+With the new update of Power BI where we can format each measure inside the calculation group you could format them to show the correct format for each value.
 
+![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Time%20intelligence%20CG%202.png)
 
+As show in the image above insering the "Time Calc" (which is the name of the calculation group) on the Columns values it shows all the values for the "Sales Amount" metric for all the metrics developed on the Tabular Editor and formated in the way it has been written in each metric. 
 
+### Calculated Groups in Metrics 
+
+To give a more interactive approach to our Report we can create a calculation group for each metrics we already have calculated in the report. 
+
+![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Calculated%20groups%20Metricas.png)
+
+And format them to show the correct value as it could be the Quantity by YoY %.
+
+```
+IF (
+    SELECTEDVALUE ( 'Time Intelligence'[Time Calculation] ) = "YOY%",
+    "#,##%;-#,##%;0%",
+    "#,###.##;-#,###.##; 0"
+)
+```
+
+![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Calculated%20groups%20Metricas.png)
+
+With this aproach, we can creat crossfilter between the both calculation groups created depending on the metrics filtered in the filter created in the Report. 
 
 ![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/Calculation_Groups_in_Action.PNG)
 
