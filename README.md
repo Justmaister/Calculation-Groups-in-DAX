@@ -73,10 +73,18 @@ IF (
     "#,###.##;-#,###.##; 0"
 )
 ```
+With this aproach, we can creat crossfilter between the both calculation groups created depending on the metrics filtered in the Report. So now we have one graph that has 42 KPIs in there whith the creation of only 13 metrics and 2 Calculation Groups, now the graph shows different results depending on the filters selected and Formated in the way each meaure need to be seen for the end users. 
 
-![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Calculated%20groups%20Metricas.png)
+![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Calculated%20groups%20Grafica.png)
+    
+One of the bigest advantages of having develop calculation groups on Tabular Editor is that before the introduction of Calculation Groups we should create a table with all the name of the Measures and the order of them to be shown in the filter and later create a measure to select them.
 
-With this aproach, we can creat crossfilter between the both calculation groups created depending on the metrics filtered in the filter created in the Report. 
+![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Create%20Table.png)
+
+![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Measure%20Create%20Table.png)
+
+This approach could not give us the oportunity to do a cross filter between the Time Intelligence Calulation Group developed before unless you write a DAX measure with all the combinations that we would develop wichi is impossible to maintain in the time if we need some changes and it is confusing and time consuming. 
+
 
 ![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/Calculation_Groups_in_Action.PNG)
 
