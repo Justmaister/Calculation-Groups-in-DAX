@@ -85,10 +85,47 @@ One of the bigest advantages of having develop calculation groups on Tabular Edi
 
 This approach could not give us the oportunity to do a cross filter between the Time Intelligence Calulation Group developed before unless you write a DAX measure with all the combinations that we would develop wichi is impossible to maintain in the time if we need some changes and it is confusing and time consuming. 
 
+### Currency Format 
 
-![alt text](https://github.com/Justmaister/Calculation-Groups-in-DAX/blob/master/Images/Calculation_Groups_in_Action.PNG)
+To the end I left the feature that bring Power Bi to the next level, the currency format, where we can create a new calculation group that will depend on the currency code and that let us see if we want to see the measures with the conversion rates or without them. In this case the conversion rate it will depend on the daily avergare rate for each currency versus USD. To do that we create a new calculation group named "Conversion" with 2 measures inside. 
+
+```sh
+No conversion = SELECTEDMEASURE ()
+
+Currency Conversion = 
+    IF (
+        SELECTEDVALUE ( 'Currency'[currency code], "USD" ) = "USD",
+        selectedmeasure(),
+        SUMX (
+            VALUES ( 'Date'[Calendar Year Month] ),
+            CALCULATE ( selectedmeasure() * MAX ( 'ExchangeRate'[AverageRate] ) )
+        )
+    )
+```
+
+![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Calculated%20groups%20Currency.png)
+
+This will return us the metric selected in our previous filter with the `ExchnageRate[AverageRate]` of each currency selected, but we can not see the simbol from each of them, so we need to change the **Format String Expreesion** for the Currency Conversion that will be the following.  
+
+```
+IF (
+    SELECTEDMEASURE () = "Margin %",
+    "0.00%",
+    SELECTEDVALUE ( 'Currency'[Currency Format], "#,0.00" )
+)
+```
+
+
+![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Calculated%20groups%20Grafica%20Currency%201.png)
+
+So finally we have added the currecncy code filter and apply to the filter page the **Currency conversion** que have created in the Calculated Group to represent the data in a Currency value. 
+
+If we look on the image above we have 3 filters with 712 possibilities to see only one graph, the development of the Calulated groups in Power BI it give us a new prespective to create reports and analyse the KPIs. 
+
+I hope that you find useful this guideline to develop the Calculation Groups and feel free to play with the [Calculation Group.pbix] you can find in my Github Respoitory. 
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
 
 [Tabular Editor]: <https://www.sqlbi.com/tools/tabular-editor/>
+[Calculation Group.pbix]: <https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor>
