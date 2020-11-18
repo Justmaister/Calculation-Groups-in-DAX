@@ -77,7 +77,7 @@ With this aproach, we can creat crossfilter between the both calculation groups 
 
 ![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Calculated%20groups%20Grafica.png)
     
-One of the bigest advantages of having develop calculation groups on Tabular Editor is that before the introduction of Calculation Groups we should create a table with all the name of the Measures and the order of them to be shown in the filter and later create a measure to select them.
+One of the bigest advantages of having develop calculation groups on Tabular Editor is that before the introduction of Calculation Groups we need to create a table with all the name of the Measures and the order of them to be shown in the filter and later create the following measure **filter measure** to select them.
 
 ![alt text](https://github.com/Justmaister/Calculation-Groups-with-Tabular-Editor/blob/master/Images/Create%20Table.png)
 
