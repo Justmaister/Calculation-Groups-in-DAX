@@ -4,7 +4,7 @@
 
 Calculation Groups is a set of calculation items created on Tabular Editor that are applied on top of existing DAX measures. 
 
-To write this DAX expresions you should download the last version of [Tabular Editor].
+To write this DA expresions you should download the last version of [Tabular Editor].
 
 With calculation groups we can easily create different functions for all different measures created on the Tabular Model that help all the Power BI developers and save a lot of time, also it take the BI Reports to another level of interactivity, as is the creation of the different Time Intelligence functions, and now we have the ability to format each of the calculation items.  
 
